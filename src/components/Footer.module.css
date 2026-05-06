@@ -1,0 +1,109 @@
+.footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 5rem 0 2rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brand h3 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.brand p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  color: var(--accent-gold);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcon:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+}
+
+.title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-gold);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link {
+  transition: color var(--transition-normal);
+  display: inline-block;
+}
+
+.link:hover {
+  color: var(--accent-gold);
+  transform: translateX(5px);
+}
+
+.contactInfo {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contactIcon {
+  color: var(--accent-gold);
+  margin-top: 0.2rem;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

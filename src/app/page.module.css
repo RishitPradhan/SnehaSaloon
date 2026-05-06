@@ -1,0 +1,288 @@
+.main {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.heroBg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(26, 15, 10, 0.6), rgba(26, 15, 10, 0.8));
+  z-index: -1;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+.heroContent h1 {
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Services Preview */
+.servicesSection {
+  background-color: var(--bg-primary);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.serviceCard {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.serviceCardBg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.serviceCardBg img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.serviceCardOverlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(26,15,10,0.2), rgba(26,15,10,0.9));
+  z-index: 2;
+  transition: background var(--transition-normal);
+}
+
+.serviceCardContent {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-glow);
+}
+
+.serviceCard:hover .serviceCardBg img {
+  transform: scale(1.1);
+}
+
+.serviceCard:hover .serviceCardOverlay {
+  background: linear-gradient(to bottom, rgba(26,15,10,0.4), rgba(26,15,10,0.95));
+}
+
+.serviceCard:hover .serviceCardContent {
+  transform: translateY(0);
+}
+
+.serviceCard h3 {
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+}
+
+.serviceCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Why Choose Us */
+.featuresSection {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+}
+
+.featureCard {
+  text-align: center;
+}
+
+.featureIcon {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.featureCard:hover .featureIcon {
+  background: var(--accent-gold);
+  color: var(--bg-white);
+  transform: scale(1.1);
+}
+
+
+
+/* Gallery */
+.gallerySection {
+  padding: 0;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.galleryItem:hover img {
+  transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonialsSection {
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonialCard {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stars {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.quote {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+/* Final CTA */
+.ctaSection {
+  background: linear-gradient(rgba(26, 15, 10, 0.9), rgba(26, 15, 10, 0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80') center/cover;
+  text-align: center;
+  padding: 8rem 0;
+}
+
+.ctaSection h2 {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 992px) {
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroButtons {
+    flex-direction: column;
+  }
+}

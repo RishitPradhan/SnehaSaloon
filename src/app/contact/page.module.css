@@ -1,0 +1,161 @@
+.pageHeader {
+  padding: 10rem 0 5rem;
+  background-color: var(--bg-secondary);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pageHeader h1 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactSection {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+}
+
+.contactInfo h2 {
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoContent h4 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoContent p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--accent-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  transition: all var(--transition-normal);
+}
+
+.socialIcon:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+}
+
+.contactFormWrapper {
+  background: var(--bg-secondary);
+  padding: 3rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contactFormWrapper h3 {
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.formControl {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: border-color var(--transition-normal);
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+textarea.formControl {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.mapSection {
+  height: 400px;
+  width: 100%;
+}
+
+.mapSection iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 992px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactFormWrapper {
+    padding: 2rem;
+  }
+}

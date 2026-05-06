@@ -1,0 +1,181 @@
+.pageHeader {
+  padding: 10rem 0 5rem;
+  background-color: var(--bg-primary);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pageHeader h1 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricingSection {
+  padding: 6rem 0;
+  background-color: var(--bg-light);
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.pricingCard {
+  background: var(--bg-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.pricingCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.popularCard {
+  background: var(--bg-primary);
+  color: var(--bg-white);
+  border: 1px solid var(--accent-gold);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.popularCard:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tierName {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--bg-primary);
+  margin-bottom: 1rem;
+}
+
+.popularCard .tierName {
+  color: var(--bg-white);
+}
+
+.price {
+  font-size: 3.5rem;
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.price span {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.popularCard .price span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.featuresList {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.featuresList li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  color: var(--text-dark);
+}
+
+.popularCard .featuresList li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+.featuresList li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.faqSection {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.faqSection h2 {
+  color: var(--accent-gold);
+  margin-bottom: 3rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.faqItem {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+.faqItem h4 {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.faqItem p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .popularCard {
+    transform: none;
+  }
+  
+  .popularCard:hover {
+    transform: translateY(-10px);
+  }
+}
