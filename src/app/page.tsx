@@ -171,6 +171,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Find Us Section */}
+      <section className={`section ${styles.findUsSection}`}>
+        <div className="container">
+          <div className={`${styles.sectionHeader} animate-on-scroll`}>
+            <h2>Find Us</h2>
+            <p>Visit our salon for a premium beauty experience.</p>
+          </div>
+          <div className={`${styles.mapContainer} animate-on-scroll`}>
+            <iframe 
+              src="https://maps.google.com/maps?q=Plot%20no.%204C%20-%201441,%20Sector%2011,%20CDA%20Cuttack&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sneha Salon Location"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className={styles.ctaSection}>
         <div className="container animate-on-scroll">

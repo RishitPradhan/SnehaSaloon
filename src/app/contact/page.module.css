@@ -19,7 +19,8 @@
 
 .contactSection {
   padding: 6rem 0;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-white);
+  color: var(--text-dark);
 }
 
 .contactGrid {
@@ -29,7 +30,7 @@
 }
 
 .contactInfo h2 {
-  color: var(--accent-gold);
+  color: var(--text-dark);
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -48,25 +49,44 @@
 }
 
 .iconWrapper {
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--accent-gold);
   padding: 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.iconMap {
+  color: #ea4335;
+  background: rgba(234, 67, 53, 0.1);
+}
+
+.iconPhone {
+  color: #34b7f1;
+  background: rgba(52, 183, 241, 0.1);
+}
+
+.iconWhatsApp {
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.1);
+}
+
+.iconMail {
+  color: #fbbc05;
+  background: rgba(251, 188, 5, 0.1);
 }
 
 .infoContent h4 {
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-family: var(--font-heading);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .infoContent p {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 0;
 }
 
@@ -78,26 +98,56 @@
 .socialIcon {
   width: 45px;
   height: 45px;
-  border: 1px solid var(--accent-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-gold);
   transition: all var(--transition-normal);
+  border: 1px solid transparent;
 }
 
-.socialIcon:hover {
-  background: var(--accent-gold);
-  color: var(--bg-primary);
+.socialIconFacebook {
+  color: #1877F2;
+  border-color: rgba(24, 119, 242, 0.3);
+  background: rgba(24, 119, 242, 0.05);
+}
+.socialIconFacebook:hover {
+  background: #1877F2;
+  color: #fff;
   transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+}
+
+.socialIconInstagram {
+  color: #E1306C;
+  border-color: rgba(225, 48, 108, 0.3);
+  background: rgba(225, 48, 108, 0.05);
+}
+.socialIconInstagram:hover {
+  background: #E1306C;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+}
+
+.socialIconTwitter {
+  color: #1DA1F2;
+  border-color: rgba(29, 161, 242, 0.3);
+  background: rgba(29, 161, 242, 0.05);
+}
+.socialIconTwitter:hover {
+  background: #1DA1F2;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
 }
 
 .contactFormWrapper {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, #1a0f0a 0%, #0f0805 100%);
   padding: 3rem;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .contactFormWrapper h3 {
@@ -113,38 +163,77 @@
 
 .formGroup label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
 }
 
 .formControl {
   width: 100%;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 8px;
   color: var(--text-primary);
   font-family: var(--font-body);
-  transition: border-color var(--transition-normal);
+  transition: all var(--transition-normal);
+}
+
+.formControl::placeholder {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .formControl:focus {
   outline: none;
   border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
 }
 
 textarea.formControl {
   resize: vertical;
-  min-height: 120px;
+  min-height: 150px;
 }
 
-.mapSection {
-  height: 400px;
+.submitButton {
   width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #e0b863 100%);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.mapSection iframe {
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.miniMap {
+  margin-top: 2.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.miniMap iframe {
   width: 100%;
   height: 100%;
   border: 0;

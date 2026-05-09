@@ -64,32 +64,31 @@ export default function Contact() {
               
               <div className={styles.infoList}>
                 <div className={styles.infoItem}>
-                  <div className={styles.iconWrapper}><MapPin size={24} /></div>
+                  <div className={`${styles.iconWrapper} ${styles.iconMap}`}><MapPin size={24} /></div>
                   <div className={styles.infoContent}>
                     <h4>Visit Us</h4>
-                    <p>123 Luxury Avenue, Beauty Hub<br/>Bhubaneswar, Odisha 751001</p>
+                    <p>Plot no. 4C - 1441, Sector 11<br/>CDA Cuttack</p>
                   </div>
                 </div>
                 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconWrapper}><Phone size={24} /></div>
+                  <div className={`${styles.iconWrapper} ${styles.iconPhone}`}><Phone size={24} /></div>
                   <div className={styles.infoContent}>
                     <h4>Call Us</h4>
-                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                    <p><a href="tel:+919876543211">+91 98765 43211</a></p>
+                    <p><a href="tel:+917681859504">+91 76818 59504</a></p>
                   </div>
                 </div>
 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconWrapper}><MessageCircle size={24} /></div>
+                  <div className={`${styles.iconWrapper} ${styles.iconWhatsApp}`}><MessageCircle size={24} /></div>
                   <div className={styles.infoContent}>
                     <h4>WhatsApp</h4>
-                    <p><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">+91 98765 43210</a></p>
+                    <p><a href="https://wa.me/917681859504" target="_blank" rel="noopener noreferrer">+91 76818 59504</a></p>
                   </div>
                 </div>
                 
                 <div className={styles.infoItem}>
-                  <div className={styles.iconWrapper}><Mail size={24} /></div>
+                  <div className={`${styles.iconWrapper} ${styles.iconMail}`}><Mail size={24} /></div>
                   <div className={styles.infoContent}>
                     <h4>Email Us</h4>
                     <p><a href="mailto:hello@snehasalon.com">hello@snehasalon.com</a></p>
@@ -98,9 +97,19 @@ export default function Contact() {
               </div>
 
               <div className={styles.socialLinks}>
-                <a href="#" className={styles.socialIcon} aria-label="Facebook"><FacebookIcon /></a>
-                <a href="#" className={styles.socialIcon} aria-label="Instagram"><InstagramIcon /></a>
-                <a href="#" className={styles.socialIcon} aria-label="Twitter"><TwitterIcon /></a>
+                <a href="#" className={`${styles.socialIcon} ${styles.socialIconFacebook}`} aria-label="Facebook"><FacebookIcon /></a>
+                <a href="#" className={`${styles.socialIcon} ${styles.socialIconInstagram}`} aria-label="Instagram"><InstagramIcon /></a>
+                <a href="#" className={`${styles.socialIcon} ${styles.socialIconTwitter}`} aria-label="Twitter"><TwitterIcon /></a>
+              </div>
+
+              <div className={styles.miniMap}>
+                <iframe 
+                  src="https://maps.google.com/maps?q=Plot%20no.%204C%20-%201441,%20Sector%2011,%20CDA%20Cuttack&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sneha Salon Location"
+                ></iframe>
               </div>
             </div>
 
@@ -147,7 +156,7 @@ export default function Contact() {
                     <textarea id="message" name="message" value={formData.message} onChange={handleChange} required className={styles.formControl} placeholder="Tell us about your requirements..."></textarea>
                   </div>
 
-                  <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={isSubmitting}>
+                  <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </form>
@@ -158,16 +167,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Google Maps Embed */}
-      <section className={styles.mapSection}>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119743.53374955681!2d85.73693248325607!3d20.299863486392095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d2d5170aa5%3A0xfc580e2b68b33c28!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1715015000000!5m2!1sen!2sin" 
-          allowFullScreen 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Sneha Salon Location"
-        ></iframe>
-      </section>
+
     </main>
   );
 }

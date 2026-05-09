@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 
@@ -21,7 +22,8 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          Sneha Salon
+          <Image src="/images/logo.jpeg" alt="Sneha Salon Logo" width={40} height={40} className={styles.logoImage} />
+          <span>Sneha Salon</span>
         </Link>
 
         <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileActive : ""}`}>

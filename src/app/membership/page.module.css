@@ -1,8 +1,10 @@
+/* Dark Brown and White Theme for Membership Page Only */
+
 .pageHeader {
   padding: 10rem 0 5rem;
   background-color: var(--bg-primary);
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pageHeader h1 {
@@ -11,157 +13,280 @@
 }
 
 .pageHeader p {
-  color: var(--text-secondary);
+  color: #ffffff;
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .pricingSection {
-  padding: 6rem 0;
-  background-color: var(--bg-light);
+  padding: 8rem 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricingSection::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .pricingGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  align-items: center;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
 }
 
 .pricingCard {
-  background: var(--bg-white);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 8px;
-  padding: 3rem 2rem;
+  background: linear-gradient(145deg, rgba(35, 22, 16, 0.8) 0%, rgba(15, 8, 5, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   position: relative;
-  transition: all var(--transition-normal);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .pricingCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: translateY(-15px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .popularCard {
-  background: var(--bg-primary);
-  color: var(--bg-white);
-  border: 1px solid var(--accent-gold);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
-  box-shadow: var(--shadow-glow);
+  background: linear-gradient(145deg, rgba(45, 28, 20, 0.9) 0%, rgba(20, 11, 7, 0.95) 100%);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.08);
+  z-index: 2;
 }
 
 .popularCard:hover {
-  transform: scale(1.05) translateY(-10px);
+  transform: scale(1.05) translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 0.15);
 }
 
 .popularBadge {
   position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  width: 100%;
   background: var(--accent-gold);
   color: var(--bg-primary);
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
+  padding: 0.6rem;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .tierName {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  color: var(--bg-primary);
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .popularCard .tierName {
-  color: var(--bg-white);
+  color: #ffffff;
 }
 
 .price {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-family: var(--font-heading);
-  color: var(--accent-gold);
+  color: #ffffff;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popularCard .price {
+  color: var(--accent-gold);
 }
 
 .price span {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: var(--font-body);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: normal;
-}
-
-.popularCard .price span {
-  color: rgba(255, 255, 255, 0.6);
+  margin-left: 0.5rem;
 }
 
 .featuresList {
   list-style: none;
   text-align: left;
   margin-bottom: 3rem;
+  flex-grow: 1;
 }
 
 .featuresList li {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   display: flex;
   align-items: flex-start;
-  gap: 0.8rem;
-  color: var(--text-dark);
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
 }
 
 .popularCard .featuresList li {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  color: var(--text-secondary);
+  border-bottom-color: rgba(255,255,255,0.2);
+}
+
+.featuresList li:last-child {
+  border-bottom: none;
 }
 
 .featuresList li svg {
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
+  color: var(--accent-gold);
 }
 
+/* Buttons */
+.subscribeBtn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  display: block;
+}
+
+.subscribeBtn:hover {
+  background: #ffffff;
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  border-color: #ffffff;
+}
+
+.subscribeBtnPremium {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  background: #ffffff;
+  color: var(--bg-primary);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.subscribeBtnPremium:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* FAQ Section */
 .faqSection {
-  padding: 6rem 0;
+  padding: 8rem 0;
   background-color: var(--bg-primary);
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .faqSection h2 {
   color: var(--accent-gold);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
 }
 
-.faqGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: left;
 }
 
 .faqItem {
-  background: var(--bg-secondary);
-  padding: 2rem;
-  border-radius: 4px;
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.faqItem h4 {
-  color: var(--accent-gold);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.faqItem:hover {
+  border-color: #ffffff;
+}
+
+.faqHeader {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
   font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-.faqItem p {
-  color: var(--text-secondary);
+.faqHeader:hover {
+  color: #ffffff;
+}
+
+.faqContent {
+  padding: 0 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.faqContentOpen {
+  max-height: 500px;
+  padding: 0 2rem 1.5rem;
+}
+
+.faqIcon {
+  color: #ffffff;
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.faqIconOpen {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 992px) {

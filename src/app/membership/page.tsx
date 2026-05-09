@@ -1,8 +1,32 @@
-import { CheckCircle } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { CheckCircle, ChevronDown } from "lucide-react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Membership() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: "How long is the membership valid?",
+      answer: "All our membership plans are valid for exactly 365 days from the date of purchase. You can renew them seamlessly."
+    },
+    {
+      question: "Can I share my membership benefits?",
+      answer: "Basic and Premium plans are shareable with family members. Elite memberships offer additional guest privileges."
+    },
+    {
+      question: "How do I redeem my complimentary services?",
+      answer: "Simply inform our receptionist when booking your appointment or checking out. Your complimentary services are tracked electronically on your profile."
+    },
+    {
+      question: "Is there a cancellation fee for missed appointments?",
+      answer: "Standard members are subject to our 24-hour cancellation policy. Premium and Elite members enjoy Zero Cancellation Fees."
+    }
+  ];
+
   return (
     <main>
       <section className={styles.pageHeader}>
@@ -26,7 +50,7 @@ export default function Membership() {
                 <li><CheckCircle className="text-gold" size={20} /> Priority Booking</li>
                 <li><CheckCircle className="text-gold" size={20} /> Shareable with family members</li>
               </ul>
-              <Link href="/contact" className="btn btn-outline" style={{ width: '100%' }}>Join Basic</Link>
+              <Link href="/contact" className={styles.subscribeBtn}>Join Basic</Link>
             </div>
 
             {/* Premium Tier (Popular) */}
@@ -41,7 +65,7 @@ export default function Membership() {
                 <li><CheckCircle className="text-gold" size={20} /> Shareable with family members</li>
                 <li><CheckCircle className="text-gold" size={20} /> Priority Booking & Zero Cancellation Fee</li>
               </ul>
-              <Link href="/contact" className="btn btn-primary" style={{ width: '100%' }}>Join Premium</Link>
+              <Link href="/contact" className={styles.subscribeBtnPremium}>Join Premium</Link>
             </div>
 
             {/* Elite Tier */}
@@ -56,7 +80,7 @@ export default function Membership() {
                 <li><CheckCircle className="text-gold" size={20} /> Dedicated Personal Stylist</li>
                 <li><CheckCircle className="text-gold" size={20} /> Complimentary Consultations</li>
               </ul>
-              <Link href="/contact" className="btn btn-outline" style={{ width: '100%' }}>Join Elite</Link>
+              <Link href="/contact" className={styles.subscribeBtn}>Join Elite</Link>
             </div>
 
           </div>
@@ -67,19 +91,21 @@ export default function Membership() {
       <section className={styles.faqSection}>
         <div className="container animate-on-scroll">
           <h2>Membership FAQs</h2>
-          <div className={styles.faqGrid}>
-            <div className={styles.faqItem}>
-              <h4>How long is the membership valid?</h4>
-              <p>All our membership plans are valid for exactly 365 days from the date of purchase. You can renew them seamlessly.</p>
-            </div>
-            <div className={styles.faqItem}>
-              <h4>Can I share my membership benefits?</h4>
-              <p>Memberships are non-transferable. However, Elite members can bring one guest per month who will receive a 10% discount on their services.</p>
-            </div>
-            <div className={styles.faqItem}>
-              <h4>How do I redeem my complimentary services?</h4>
-              <p>Simply inform our receptionist when booking your appointment or checking out. Your complimentary services are tracked electronically on your profile.</p>
-            </div>
+          <div className={styles.faqContainer}>
+            {faqs.map((faq, index) => (
+              <div key={index} className={styles.faqItem}>
+                <button 
+                  className={styles.faqHeader} 
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  {faq.question}
+                  <ChevronDown className={`${styles.faqIcon} ${openFaq === index ? styles.faqIconOpen : ''}`} size={24} />
+                </button>
+                <div className={`${styles.faqContent} ${openFaq === index ? styles.faqContentOpen : ''}`}>
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

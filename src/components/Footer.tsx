@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const FacebookIcon = () => (
@@ -19,7 +20,10 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Brand */}
           <div className={styles.brand}>
-            <h3>Sneha Salon & Spa</h3>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
+              <Image src="/images/logo.jpeg" alt="Sneha Salon Logo" width={50} height={50} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+              <h3 style={{ margin: 0 }}>Sneha Salon & Spa</h3>
+            </div>
             <p>
               Experience the epitome of luxury beauty and care. We offer expert styling, rejuvenating skin care, and holistic wellness therapies.
             </p>
@@ -60,11 +64,11 @@ export default function Footer() {
             <ul className={styles.contactInfo}>
               <li className={styles.contactItem}>
                 <MapPin className={styles.contactIcon} size={20} />
-                <span>123 Luxury Avenue, Beauty Hub, Bhubaneswar</span>
+                <span>Plot no. 4C - 1441, Sector 11, CDA Cuttack</span>
               </li>
               <li className={styles.contactItem}>
                 <Phone className={styles.contactIcon} size={20} />
-                <span>+91 98765 43210</span>
+                <span>+91 76818 59504</span>
               </li>
               <li className={styles.contactItem}>
                 <Mail className={styles.contactIcon} size={20} />
