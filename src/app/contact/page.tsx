@@ -119,7 +119,7 @@ export default function Contact() {
 
               <div className={styles.miniMap}>
                 <iframe 
-                  src="https://maps.google.com/maps?q=1475,%20CDA%20Sector%2011,%20Cuttack,%20Odisha%20753015&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  src="https://maps.google.com/maps?q=20.482124,85.814163&t=&z=17&ie=UTF8&iwloc=&output=embed" 
                   allowFullScreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
