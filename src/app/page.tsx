@@ -180,7 +180,7 @@ export default function Home() {
           </div>
           <div className={`${styles.mapContainer} animate-on-scroll`}>
             <iframe 
-              src="https://maps.google.com/maps?q=Plot%20no.%204C%20-%201441,%20Sector%2011,%20CDA%20Cuttack&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=1475,%20CDA%20Sector%2011,%20Cuttack,%20Odisha%20753015&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"

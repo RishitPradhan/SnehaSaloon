@@ -85,7 +85,7 @@ export default function Contact() {
                   <div className={`${styles.iconWrapper} ${styles.iconMap}`}><MapPin size={24} /></div>
                   <div className={styles.infoContent}>
                     <h4>Visit Us</h4>
-                    <p>Plot no. 4C - 1441, Sector 11<br/>CDA Cuttack</p>
+                    <p>1475, CDA Sector 11<br/>Cuttack, Odisha 753015</p>
                   </div>
                 </div>
                 
@@ -119,7 +119,7 @@ export default function Contact() {
 
               <div className={styles.miniMap}>
                 <iframe 
-                  src="https://maps.google.com/maps?q=Plot%20no.%204C%20-%201441,%20Sector%2011,%20CDA%20Cuttack&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  src="https://maps.google.com/maps?q=1475,%20CDA%20Sector%2011,%20Cuttack,%20Odisha%20753015&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                   allowFullScreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"

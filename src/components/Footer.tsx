@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className={styles.contactInfo}>
               <li className={styles.contactItem}>
                 <MapPin className={styles.contactIcon} size={20} />
-                <span>Plot no. 4C - 1441, Sector 11, CDA Cuttack</span>
+                <span>1475, CDA Sector 11, Cuttack, Odisha 753015</span>
               </li>
               <li className={styles.contactItem}>
                 <Phone className={styles.contactIcon} size={20} />
