@@ -20,6 +20,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Sneha Salon & Spa | Luxury Beauty & Care",
   description: "Experience premium styling, skin care, and wellness at Sneha Salon & Spa. Book your appointment today.",
+  icons: {
+    icon: "/images/logo.jpeg",
+    apple: "/images/logo.jpeg",
+  },
 };
 
 export default function RootLayout({

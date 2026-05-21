@@ -75,7 +75,7 @@ export default function Membership() {
               <ul className={styles.featuresList}>
                 <li><CheckCircle className="text-gold" size={20} /> 30 Services / 30 Hours of VIP treatments</li>
                 <li><CheckCircle className="text-gold" size={20} /> Valid for exactly 365 days</li>
-                <li><CheckCircle className="text-gold" size={20} /> VIP Lounge Access & Special Perks</li>
+                <li><CheckCircle className="text-gold" size={20} /> Special Perks & Privileges</li>
                 <li><CheckCircle className="text-gold" size={20} /> Shareable with family & friends</li>
                 <li><CheckCircle className="text-gold" size={20} /> Dedicated Personal Stylist</li>
                 <li><CheckCircle className="text-gold" size={20} /> Complimentary Consultations</li>
